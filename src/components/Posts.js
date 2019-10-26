@@ -1,12 +1,73 @@
 import React, { Component } from 'react';
-import Post from './Post';
+import InstaService from '../services/instaService';
+import User from './User';
+import ErrorMessage from './Error';
 
 export default class Posts extends Component {
+    InstaService = new InstaService();
+    state = {
+        posts: [],
+        error: false
+    }
+
+    componentDidMount() {
+        this.updatePosts();
+    }
+
+    updatePosts() {
+        this.InstaService.getAllPosts()
+        .then(this.onPostLoaded)
+        .catch(this.onError);
+    }
+
+    onPostLoaded = (posts) => {
+        this.setState({
+            posts, //short object notation - es6
+            error: false
+        })
+        console.log(this.state.posts);
+    }
+
+    onError = () => {
+        this.setState({
+            error: true
+        })
+    }
+
+    renderItems(arr) {
+        return arr.map(item => {
+            const {name, altname, photo, src, alt, descr, id} = item;
+
+            return (
+                <div key={id} className="post">
+                    <User 
+                        src={photo} 
+                        alt={altname}
+                        name={name}
+                        min />
+                    <img src={src} alt={alt}></img>
+                    <div className="post__name">
+                        {name}
+                    </div>
+                    <div className="post__descr">
+                        {descr}
+                    </div>
+                </div>
+            )
+        });
+    }
+
     render() {
+        const {error, posts} = this.state;
+
+        if (error) {
+            return <ErrorMessage />
+        }
+
+        const items = this.renderItems(posts);
         return (
             <div className="left">
-                <Post src="http://isha.sadhguru.org/blog/wp-content/uploads/2016/05/natures-temples.jpg" alt="first" />
-                <Post src="https://wwwimage-secure.cbsstatic.com/thumbnails/photos/w1920/marquee/1025957/72e1f4c7b764c8d2_mwp_hp_hero_landscape.jpg" alt="second" />
+               {items}
             </div>
         )
     }
