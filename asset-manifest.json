@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "vitaliiborodulin.github.io/insta/static/css/main.3612a5d5.chunk.css",
+    "main.js": "vitaliiborodulin.github.io/insta/static/js/main.6f75d212.chunk.js",
+    "main.js.map": "vitaliiborodulin.github.io/insta/static/js/main.6f75d212.chunk.js.map",
+    "runtime-main.js": "vitaliiborodulin.github.io/insta/static/js/runtime-main.5d46f24e.js",
+    "runtime-main.js.map": "vitaliiborodulin.github.io/insta/static/js/runtime-main.5d46f24e.js.map",
+    "static/js/2.018e783a.chunk.js": "vitaliiborodulin.github.io/insta/static/js/2.018e783a.chunk.js",
+    "static/js/2.018e783a.chunk.js.map": "vitaliiborodulin.github.io/insta/static/js/2.018e783a.chunk.js.map",
+    "index.html": "vitaliiborodulin.github.io/insta/index.html",
+    "precache-manifest.51578ce9f133ec1b9d8063c6dc174b7c.js": "vitaliiborodulin.github.io/insta/precache-manifest.51578ce9f133ec1b9d8063c6dc174b7c.js",
+    "service-worker.js": "vitaliiborodulin.github.io/insta/service-worker.js",
+    "static/css/main.3612a5d5.chunk.css.map": "vitaliiborodulin.github.io/insta/static/css/main.3612a5d5.chunk.css.map",
+    "static/media/error.png": "vitaliiborodulin.github.io/insta/static/media/error.3b8ad90a.png",
+    "static/media/logo.svg": "vitaliiborodulin.github.io/insta/static/media/logo.9e8a2b39.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5d46f24e.js",
+    "static/js/2.018e783a.chunk.js",
+    "static/css/main.3612a5d5.chunk.css",
+    "static/js/main.6f75d212.chunk.js"
+  ]
+}
